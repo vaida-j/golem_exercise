@@ -10,7 +10,11 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here 
     fluidPage(
-      h1("webinar")
+      h1("webinar"),
+      mod_my_first_module_ui("my_first_module_ui_1"),
+      mod_my_other_module_ui("my_other_module_ui_1"),
+      actionButton("browser", "browser"),
+      tags$script("$('#browser').hide();")
     )
   )
 }
